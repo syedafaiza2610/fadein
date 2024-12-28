@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <select id="countries">
+        <option value="-1">Select Country</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="India">India</option>
+        <option value="Bangladesh">Bangladesh</option>
+    </select>
+    <input type="button" value="Select" id="btn">
+    <!-- <label for="">Gender</label>
+    <label for="">Male</label>
+    <input type="radio" name="gender" value="Male">
+    <label for="">Female</label>
+    <input type="radio" name="gender" value="Female">
+    <input type="button" value="Select" id="btn"> -->
+
+
+    <script src="jquery.js"></script>
+    <script>
+
+
+
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                var item = $('#countries').val();
+                if (item == "-1") {
+                    alert('Please select the item')
+                }
+                else {
+                    alert(item)
+                }
+
+            })
+        })
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var a = $('input[name="gender"]:checked').val();
+                alert(a)
+            })
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <p>This is my <b>new</b> paragraph</p> -->
+    <!-- <input type="text" name="" id="inp">
+    <input type="button" value="Click" id="btn">
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            // var a = $('p').text();
+            var a = $('#inp').val();
+            alert(a)
+        })
+    })
+    </script> -->
+</body>
+
+</html>
